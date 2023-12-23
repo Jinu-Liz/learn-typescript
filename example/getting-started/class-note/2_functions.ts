@@ -14,3 +14,6 @@ function add(): number {
 function sum2(a: number, b: number): number {
     return a + b;
 }
+
+// JS에서는 정의한 파라미터의 갯수를 넘기면 무시해버리지만 타입스크립트는 에러 발생.
+sum(10, 20, 30, 40);
