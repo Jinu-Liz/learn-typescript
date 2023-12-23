@@ -6,6 +6,7 @@ module.exports = {
     jest: true,
   },
   extends: [
+    'prettier',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
@@ -14,6 +15,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
+        endOfLine: 'auto',
         singleQuote: true,
         semi: true,
         useTabs: false,
