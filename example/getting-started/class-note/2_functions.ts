@@ -17,3 +17,12 @@ function sum2(a: number, b: number): number {
 
 // JS에서는 정의한 파라미터의 갯수를 넘기면 무시해버리지만 타입스크립트는 에러 발생.
 sum(10, 20, 30, 40);
+
+// 함수의 옵셔널(Optional) 파라미터
+// 물음표를 넣으면 사용할수도 안할수도 있다.
+function log(a: string, b?: string) {
+
+}
+
+log('hello world');
+log('hello ts', 'abc')
