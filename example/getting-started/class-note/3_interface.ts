@@ -36,4 +36,22 @@ interface StringArray {
 }
 
 var arr1: StringArray = ['a', 'b', 'c'];
-arr1[0] = 10; // 'a'
+// arr1[0] = 10; // 'a'
+
+// 딕셔너리 패턴
+interface StringRegexDictionary {
+    [key: string]: RegExp
+}
+
+var obj1: StringRegexDictionary = {
+    // sth: /abc/,
+    cssFile: /\.css$/,
+    jsFile: /\.js$/,
+}
+
+// 에러발생
+// obj['cssFile'] = 'a'
+
+Object.keys(obj1).forEach(function(value) {
+
+})
