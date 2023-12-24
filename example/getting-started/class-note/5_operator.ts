@@ -39,3 +39,22 @@ function askSomeone(someone: Developer2 | Person2) {
     someone.age;    // 에러뜸
     someone.skill;  // 에러뜸
 }
+
+// Developer2 또는 Person2 둘 중 하나만 충족하면 된다.
+askSomeone({ name: '개발자', skill: '웹 개발' });
+askSomeone({ name: '캡틴', age: 100 });
+
+
+// 복수의 인터페이스를 모두 충족한 인자만 들어오므로, 인터페이스의 인자들 모두 자동완성이 된다.
+function askSomeone1(someone: Developer2 & Person2) {
+    someone.name;
+    someone.age;    // 에러뜸
+    someone.skill;  // 에러뜸
+}
+
+// Developer2와 Person2의 인자를 모두 가지고 있어야 한다.
+askSomeone1({ name:'개발자', skill: '웹 개발', age: 34 });
+
+
+var union: string | number | boolean;   // 적어도 한 개가 충족돼야함. (or)
+var intcpt: string & number & boolean;  // 모두 충족해야함. (and)
