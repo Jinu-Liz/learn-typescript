@@ -55,3 +55,21 @@ var obj1: StringRegexDictionary = {
 Object.keys(obj1).forEach(function(value) {
 
 })
+
+
+// 인터페이스 확장
+interface Person {
+    name: string;
+    age: number;
+}
+
+// 상속
+interface Developer extends Person {
+    language: string;
+}
+
+var captain: Developer = {
+    language: 'hi',
+    age: 100,
+    name: '캡틴'
+}
