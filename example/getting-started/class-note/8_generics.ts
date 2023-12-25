@@ -61,3 +61,13 @@ const login = logText<boolean>(true);
 login.valueOf();
 
 logText<number>(10);
+
+
+// 인터페이스에 제네릭을 선언하는 방법
+interface Dropdown<T> {
+    value: T;
+    selected: boolean;
+}
+
+const dropObj: Dropdown<string> = { value: 'abc', selected: false };
+const dropObj2: Dropdown<number> = { value: 10, selected: false };
