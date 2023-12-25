@@ -71,3 +71,13 @@ interface Dropdown<T> {
 
 const dropObj: Dropdown<string> = { value: 'abc', selected: false };
 const dropObj2: Dropdown<number> = { value: 10, selected: false };
+
+
+// 제네릭의 타입 제한
+function logTextLength<T>(text: T[]): T[] { // 배열을 추가적으로 줌으로써 length 사용이 가능.
+    console.log(text.length);
+    text.forEach(text => console.log(text));
+    return text;
+}
+
+logTextLength<string>(['hi', 'abc']);
