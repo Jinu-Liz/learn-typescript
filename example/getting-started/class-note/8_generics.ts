@@ -94,3 +94,19 @@ function logTextLength2<T extends LengthType>(text: T): T {
 
 logTextLength2(10); // number에는 length가 없기 때문에 에러
 logTextLength2({ length: 10 });
+
+// 제네릭 타입 제한 3 - keyof
+interface ShoppingItem {
+    name: string;
+    price: number;
+    stock: number;
+}
+
+// keyof를 사용하여 해당 인터페이스의 key들만 입력 가능하도록 제한.
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption: T): T {
+    return itemOption;
+}
+
+// getShoppingItemOption(10);
+// getShoppingItemOption<string>('a');
+getShoppingItemOption("name");  // ctrl + space키를 누르면 ShoppingItem의 key들이 나온다.
