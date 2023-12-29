@@ -20,3 +20,19 @@ var shoppingItem : Dropdown2<string> = {
 }
 
 // 타입 추론 기본3
+interface Dropdown3<T> {
+    value: T;
+    title: string;
+}
+
+interface DetailedDropdown<K> extends Dropdown3<K> {
+    description: string;
+    tag: K;
+}
+
+var detailedItem: DetailedDropdown<string> = {
+    title: 'bbc',
+    description: 'ab',
+    value: 'a',     // 타입을 상속받아 string이 추론된다.
+    tag: 'a'
+}
