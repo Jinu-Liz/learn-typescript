@@ -36,3 +36,7 @@ var detailedItem: DetailedDropdown<string> = {
     value: 'a',     // 타입을 상속받아 string이 추론된다.
     tag: 'a'
 }
+
+
+// Best Common Type
+var arr = [1, 2, true, 'a']      // string | number | boolean 으로 추론. union으로 추론해 나간다.
