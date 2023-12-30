@@ -105,3 +105,9 @@ class AddressBook {
 }
 
 new AddressBook();
+
+var div = document.querySelector('div');    // HTMLDivElement | null
+var div2 = document.querySelector('.container') as HTMLDivElement;
+if (div) {
+  div.innerText;    // null이 아님을 보장하면 HTMLDivElement로 바뀜
+}
