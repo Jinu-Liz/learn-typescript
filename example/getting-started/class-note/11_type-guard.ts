@@ -25,3 +25,15 @@ if ((tony as Developer).skill) {
     console.log(age);
     
 }
+
+
+// 타입 가드 정의
+function isDeveloper(target: Developer | Person): target is Developer {
+    return (target as Developer).skill !== undefined;
+}
+
+if (isDeveloper(tony)) {    // 타입이 Developer이기 때문에 name과 skill이 자동완성으로 나옴
+    tony.skill
+} else {        // Person의 속성인 name과 age가 나옴
+    tony.age
+}
